@@ -48,14 +48,14 @@
             const score = document.createElement('div');
             score.classList.add('content');
             
-            //button functionality    
+            
             var btn = document.querySelectorAll('button');
             btn.forEach((button) => {
                 button.addEventListener('click', () => {
                    playRound(button.value);            
                 });
              });    
-            //const playerSelection = buttons.value;
+
 
             function computerPlay() {
                 var arr = ['rock', 'paper', 'scissors'];
@@ -79,9 +79,8 @@
                 document.getElementById("warning").innerHTML = "You won! Good job!";
                 round = 5;
             } 
-            
+            // resetting scores.
             if (round === 5) {
-                //document.getElementById("warning").innerHTML = "Resetting scores.."
                 computerScore = 0;
                 playerScore = 0;
                 round = 0;
@@ -111,22 +110,18 @@
                         computerScore++;
                         round++;
                         document.getElementById("results").innerHTML = "Computer wins the round!"
-                     
-
                     }
                     else {
                          playerScore++;
                          round++;
                          usrWin;
-                     
                     }
                 }
                 else if (playerSelection ===  "paper") {
                     if (computerSelection === "scissors") {
                          computerScore++;
                          round++;
-                         document.getElementById("results").innerHTML = "Computer wins the round!"
-                     
+                         document.getElementById("results").innerHTML = "Computer wins the round!";
                      }
                      else {
                          playerScore++;
